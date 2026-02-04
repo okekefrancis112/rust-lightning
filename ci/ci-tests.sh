@@ -11,7 +11,7 @@ function PIN_RELEASE_DEPS {
 	return 0 # Don't fail the script if our rustc is higher than the last check
 }
 
-PIN_RELEASE_DEPS # pin the release dependencies in our main workspace
+PIN_RELEASE_DEPS # pin the release dependencies in our main workspace.
 
 # The backtrace v0.3.75 crate relies on rustc 1.82
 [ "$RUSTC_MINOR_VERSION" -lt 82 ] && cargo update -p backtrace --precise "0.3.74" --quiet
